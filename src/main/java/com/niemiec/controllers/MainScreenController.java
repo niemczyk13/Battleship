@@ -1,9 +1,9 @@
 package com.niemiec.controllers;
 
 import com.niemiec.logic.BorderManagement;
-import com.niemiec.logic.Exit;
 import com.niemiec.logic.GameLogic;
 import com.niemiec.logic.Open;
+import com.niemiec.view.ExitWindowView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -623,7 +623,7 @@ public class MainScreenController {
 	private CheckMenuItem automaticallySpacingOfShipsButton;
 
 	private GameLogic gameLogic;
-	private Exit exit;
+	private ExitWindowView exit;
 
 	@FXML
 	void initialize() {
@@ -654,7 +654,7 @@ public class MainScreenController {
 	@FXML
 	void close() {
 		if (gameLogic.getTheGameWasStarted()) {
-			exit = new Exit(gameLogic);
+			exit = new ExitWindowView(gameLogic);
 			exit.orClose();
 		} else {
 			System.exit(0);

@@ -1,6 +1,6 @@
 package com.niemiec.controllers;
 
-import com.niemiec.logic.Exit;
+import com.niemiec.view.ExitWindowView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,13 +11,13 @@ public class ExitWindowController {
 	@FXML
 	private static Stage stage;
 
-	private static Exit exitClass;
+	private static ExitWindowView exitClass;
 
 	public static void setStage(Stage stage) {
 		ExitWindowController.stage = stage;
 	}
 
-	public static void setExitClass(Exit exit2) {
+	public static void setExitClass(ExitWindowView exit2) {
 		ExitWindowController.exitClass = exit2;
 	}
 

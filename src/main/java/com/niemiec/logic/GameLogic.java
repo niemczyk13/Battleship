@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.niemiec.objects.Player;
 import com.niemiec.objects.PlayerImpl;
+import com.niemiec.view.EndGameWindowView;
 
 import javafx.event.ActionEvent;
 import javafx.scene.layout.VBox;
@@ -72,7 +73,9 @@ public class GameLogic implements Serializable {
 		if (shotShip.shot(event)) {
 			String winner = shotShip.getWinnerName();
 			// okienko kto wygrywa i pytanie czy zaczynamy od nowa
-			System.out.println("Wygrywa gracz: " + winner);
+//			System.out.println("Wygrywa gracz: " + winner);
+			EndGameWindowView endGame = new EndGameWindowView("Wygrywa gracz: " + winner);
+			endGame.view();
 			BorderManagement.setBordersToEndGame();
 		}
 	}
